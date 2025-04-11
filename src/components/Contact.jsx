@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import { styles } from '../styles';
@@ -9,15 +9,19 @@ import { send, sendHover } from '../assets';
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
-    name: '',
+    name: '', 
     email: '',
     message: '',
   });
   const [loading, setLoading] = useState(false);
 
+  // Initialisation d'EmailJS au chargement du composant
+  useEffect(() => {
+    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+  }, []);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-
     setForm({ ...form, [name]: value });
   };
 
@@ -25,20 +29,12 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    // sign up on emailjs.com (select the gmail service and connect your account).
-    //click on create a new template then click on save.
+    // Version modifiée sans passer la publicKey en paramètre
     emailjs
-      .send(
-        'serviceID', // paste your ServiceID here (you'll get one when your service is created).
-        'templateID', // paste your TemplateID here (you'll find it under email templates).
-        {
-          from_name: form.name,
-          to_name: 'YourName', // put your name here.
-          from_email: form.email,
-          to_email: 'youremail@gmail.com', //put your email here.
-          message: form.message,
-        },
-        'yourpublickey' //paste your Public Key here. You'll get it in your profile section.
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        formRef.current
       )
       .then(
         () => {
@@ -53,8 +49,8 @@ const Contact = () => {
         },
         (error) => {
           setLoading(false);
-          console.log(error);
-          alert('Something went wrong. Please try again.');
+          console.log("EmailJS Error Details:", error);
+          alert(`Something went wrong: ${error.text}`);
         }
       );
   };
@@ -92,7 +88,7 @@ const Contact = () => {
             <input
               type="email"
               name="email"
-              value={form.email}
+              value={form.user_email}
               onChange={handleChange}
               placeholder="What's your email?"
               className="bg-eerieBlack py-4 px-6

@@ -13,7 +13,7 @@ import {
   nodejs,
   git,
   figma,
-  docker,
+  sass,
   postgresql,
   rubyrails,
   graphql,
@@ -117,8 +117,8 @@ const technologies = [
     icon: figma,
   },
   {
-    name: 'docker',
-    icon: docker,
+    name: 'sass',
+    icon: sass,
   },
 ];
 
