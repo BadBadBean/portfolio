@@ -3,7 +3,10 @@ import {
   backend,
   ux,
   prototyping,
+  bootstrap,
   javascript,
+  jquery,
+  notion,
   typescript,
   html,
   css,
@@ -13,7 +16,9 @@ import {
   nodejs,
   git,
   figma,
+  prestashop,
   sass,
+  wordpress,
   postgresql,
   rubyrails,
   graphql,
@@ -27,16 +32,18 @@ import {
   dcc,
   kelhel,
   microverse,
+  openclassrooms,
+  brain,
 } from '../assets';
 
 export const navLinks = [
   {
     id: 'about',
-    title: 'About',
+    title: 'À propos',
   },
   {
     id: 'projects',
-    title: 'Projects',
+    title: 'Projets',
   },
   {
     id: 'contact',
@@ -73,12 +80,28 @@ const technologies = [
     icon: css,
   },
   {
+    name: 'Sass',
+    icon: sass,
+  },
+  {
     name: 'JavaScript',
     icon: javascript,
   },
   {
     name: 'TypeScript',
     icon: typescript,
+  },
+  {
+    name: 'Tailwind CSS',
+    icon: tailwind,
+  },
+  {
+    name: 'Bootstrap',
+    icon: bootstrap,
+  },
+  {
+    name: 'git',
+    icon: git,
   },
   {
     name: 'React JS',
@@ -89,67 +112,59 @@ const technologies = [
     icon: redux,
   },
   {
-    name: 'Tailwind CSS',
-    icon: tailwind,
-  },
-  {
     name: 'Node JS',
     icon: nodejs,
   },
   {
-    name: 'Rails',
-    icon: rubyrails,
+    name: 'Jquery',
+    icon: jquery,
   },
   {
-    name: 'graphql',
-    icon: graphql,
+    name: 'Prestashop',
+    icon: prestashop,
   },
   {
-    name: 'postgresql',
-    icon: postgresql,
-  },
-  {
-    name: 'git',
-    icon: git,
+    name: 'WordPress',
+    icon: wordpress,
   },
   {
     name: 'figma',
     icon: figma,
   },
   {
-    name: 'sass',
-    icon: sass,
+    name: 'Notion',
+    icon: notion,
   },
 ];
 
 const experiences = [
   {
-    title: 'Front-End Developer',
-    company_name: 'Cover Hunt',
-    icon: coverhunt,
+    title: 'Apprentissage autodidacte',
+    company_name: 'HTML CSS JS Jquery Bootstrap',
+    icon: brain,
     iconBg: '#333333',
-    date: 'Aug 2021 - Feb 2022',
+    date: '2014',
   },
   {
-    title: 'Mentor (Volunteer)',
-    company_name: 'Microverse',
-    icon: microverse,
+    title: 'Création site e-commerce',
+    company_name: 'Prestashop',
+    icon: prestashop,
     iconBg: '#333333',
-    date: 'Mar 2022 - May 2022',
+    date: '2015',
   },
   {
-    title: 'Junior Software Engineer',
-    company_name: 'Kelhel',
-    icon: kelhel,
+    title: 'Formation développeur web',
+    company_name: 'Openclassrooms',
+    icon: openclassrooms,
     iconBg: '#333333',
-    date: 'May 2022 - Oct 2022',
+    date: '2018',
   },
   {
-    title: 'Full Stack Developer',
-    company_name: 'Diversity Cyber Council',
-    icon: dcc,
+    title: 'Formation Intégrateur web',
+    company_name: 'Openclassrooms',
+    icon: openclassrooms,
     iconBg: '#333333',
-    date: 'Sep 2022 - Present',
+    date: '2024-2025',
   },
 ];
 

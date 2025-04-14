@@ -3,7 +3,7 @@ import nairobi from './backgrounds/nairobi.png';
 import whiteabstract from './backgrounds/white-abstract.png';
 import worldmap from './backgrounds/world-map.png';
 
-import logo from './logo/logo-black.png';
+import logo from './logo/testlogo.png';
 import logotext from './logo/logo-text-black.png';
 
 import shaq from './personal/shaq.png';
@@ -23,26 +23,33 @@ import resume from './icons/resume.png';
 import send from './icons/send.png';
 import sendHover from './icons/sendHover.png';
 
+import bootstrap from './tech/bootstrap.png';
 import css from './tech/css.png';
 import docker from './tech/docker.png';
 import figma from './tech/figma.png';
 import git from './tech/git.png';
 import html from './tech/html.png';
 import javascript from './tech/javascript.png';
+import jquery from './tech/jquery.png';
 import nodejs from './tech/nodejs.png';
+import notion from './tech/notion.png';
 import reactjs from './tech/reactjs.png';
 import redux from './tech/redux.png';
 import tailwind from './tech/tailwind.png';
 import typescript from './tech/typescript.png';
 import graphql from './tech/graphql.png';
 import postgresql from './tech/postgresql.png';
+import prestashop from './tech/prestashop.png';
 import rubyrails from './tech/rubyrails.png';
 import sass from './tech/sass.png';
+import wordpress from './tech/wordpress.png';
 
 import coverhunt from './company/coverhunt.png';
 import dcc from './company/dcc.png';
 import kelhel from './company/kelhel.png';
 import microverse from './company/microverse.png';
+import brain from './company/brain.png';
+import openclassrooms from './company/openclassrooms.png';
 
 import komikult from './projects/komikult.png';
 import leaderboard from './projects/leaderboard.png';
@@ -73,6 +80,7 @@ export {
   resume,
   send,
   sendHover,
+  bootstrap,
   css,
   docker,
   figma,
@@ -80,13 +88,17 @@ export {
   graphql,
   html,
   javascript,
+  jquery,
   nodejs,
+  notion,
   postgresql,
+  prestashop,
   rubyrails,
   reactjs,
   redux,
   tailwind,
   typescript,
+  wordpress,
   komikult,
   leaderboard,
   math,
@@ -97,5 +109,7 @@ export {
   dcc,
   kelhel,
   microverse,
+  brain,
+  openclassrooms,
   sass,
 };
